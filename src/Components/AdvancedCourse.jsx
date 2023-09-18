@@ -1,0 +1,43 @@
+import { View, Text, FlatList,Image,TouchableOpacity } from 'react-native';
+import { data } from '../DataBase/AdvancedCourseDB';
+import { useNavigation } from '@react-navigation/native';
+
+
+const AdvancedCourse = () => {
+  const nav = useNavigation();
+    const DATA = data;
+
+      const onPressCourse=(dataID)=>{
+        nav.navigate('course-advanced', {data:dataID});
+      }
+  
+      const renderItem = (item) => {
+        return (
+          <TouchableOpacity key={item.id} onPress={()=>onPressCourse(item)} style={{marginTop:10,backgroundColor:"#fff",height:180,marginRight:10,borderRadius:10}}>
+            <Image
+              source={item.img}
+              style={{ height: 125, width:250,borderRadius:10, }}
+            />
+            <View style={{padding:10}}>
+            <Text style={{fontWeight:"bold",fontSize:15}}>{item.title}</Text>
+            <Text style={{fontWeight:"400",color:"gray"}}>{item.topic} Lessons</Text>
+            </View>
+            </TouchableOpacity>
+        );
+      };
+
+  return (
+    <View style={{marginTop:10}}>
+    <Text style={{fontSize:20,fontWeight:"bold"}}>Advanced Course</Text>
+    <FlatList
+    // key={DATA.id}
+    data={DATA}
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+    renderItem={({item})=>renderItem(item)}
+    />
+  </View>
+  )
+}
+
+export default AdvancedCourse
