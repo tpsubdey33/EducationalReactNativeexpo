@@ -6,13 +6,6 @@ import { getAuth, signOut } from "firebase/auth";
 
 
 const HeaderComponent = () => {
-  // const param =useRoute().params;
-  // const [user,setUser] = useState([])
-
-  // useEffect(()=>{
-  //   setUser(param.user)
-  //   console.log(param.user)
-  // },[])
 
     const nav = useNavigation();
 

@@ -43,31 +43,33 @@ const SingUpScreen = () => {
       });
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, pass)
     .then((userCredential)=> {
       const user = userCredential.user;
-    //   ToastAndroid.showWithGravityAndOffset(
-    //     'Login Successful',
-    //     ToastAndroid.LONG,
-    //     ToastAndroid.BOTTOM,
-    //     25,
-    //     50,
-    // );
+      // const keyId = JSON.stringify(user.accessToken);
+      // console.log(keyId);
+      ToastAndroid.showWithGravityAndOffset(
+        'Login Successful',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,
+        25,
+        50,
+    );
       setEmail('');
       setPass('');
       nav.navigate('Home');
      
     })
     .catch(err => {
-      // ToastAndroid.showWithGravityAndOffset(
-      //   'Login Unsuccessful',
-      //   ToastAndroid.LONG,
-      //   ToastAndroid.BOTTOM,
-      //   25,
-      //   50,
-      // );
+      ToastAndroid.showWithGravityAndOffset(
+        'Worng Email Id or Password',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,
+        25,
+        50,
+      );
     });
 };
 

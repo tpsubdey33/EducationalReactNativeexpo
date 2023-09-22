@@ -10,6 +10,7 @@ export const data =[
         title:'Advansed Angular Course',
         details:"HTML fundamentals: To lay a strong foundation, become familiar with HTML's tags, elements, properties, and structure. CSS fundamentals: Learn the fundamentals of CSS, including selectors, properties, and values, to successfully style and build web pages.",
         topic:2,
+        tutorial :  "3qBXWUpoPHo",
       },
       {
         id: 2,
@@ -17,6 +18,7 @@ export const data =[
         title:'Advansed React Course',
         details:"HTML fundamentals: To lay a strong foundation, become familiar with HTML's tags, elements, properties, and structure. CSS fundamentals: Learn the fundamentals of CSS, including selectors, properties, and values, to successfully style and build web pages.",
         topic:2,
+        tutorial :  "cd3P3yXyx30",
       },
       {
         id: 3,
@@ -24,5 +26,6 @@ export const data =[
         title:'Advansed React Native Course',
         details:"HTML fundamentals: To lay a strong foundation, become familiar with HTML's tags, elements, properties, and structure. CSS fundamentals: Learn the fundamentals of CSS, including selectors, properties, and values, to successfully style and build web pages.",
         topic:2,
+        tutorial :  "6l8RWV8D-Yo",
       },
 ]
